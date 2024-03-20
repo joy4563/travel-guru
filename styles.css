@@ -32,7 +32,17 @@ h4 {
 .custom-button {
     border-radius: 8px;
     background-color: #ff5400;
-    padding: 13px 15px;
+    padding: 13px 25px;
+}
+.mergin-button {
+    margin-top: 25px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #131318;
 }
 /* navbar */
 .nav-bar {
@@ -109,14 +119,29 @@ a:hover {
     width: 100%;
 }
 
+/* populer-tours */
+
+.populer-tours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ========================================================= */
 /* ----------------------for mobile------------------- */
 @media screen and (max-width: 600px) {
-    /* navbar */
+    /* common */
     .big-font {
         font-size: 22px;
         font-weight: 800;
     }
+    .title {
+        font-size: 20px;
+    }
+    /* navbar */
+
     .nav-icon {
         display: block;
     }
@@ -129,10 +154,9 @@ a:hover {
         display: flex;
         flex-direction: column;
     }
-    .banner-section{
+    .banner-section {
         padding-top: 20px;
-            height: 80vh;
-
+        height: 80vh;
     }
     .banner-title {
         color: #fff;
@@ -146,7 +170,6 @@ a:hover {
         background: rgba(255, 255, 255, 0.3);
         flex-direction: column;
         margin-top: 30px;
-
     }
     .input-item {
         border-radius: 8px;
@@ -156,7 +179,23 @@ a:hover {
         /* width: 200px; */
         /* height: 30px; */
     }
-    .where{
+    .where {
         width: 236px;
+    }
+    /* populer-tours */
+
+    .populer-tours {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
+    }
+    .populer-tours img {
+        width: 90vw;
+    }
+    .populer-tours li {
+        margin: 20px 0px;
     }
 }
