@@ -1,3 +1,4 @@
+/* common css */
 .primary-color {
     color: #ff5400;
 }
@@ -12,11 +13,26 @@ h2,
 h3,
 h4 {
     margin: 0px;
+    padding: 0px;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+.description {
+    color: #5a5a5d;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 24px;
+}
+
+.default-padding {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.custom-button {
+    border-radius: 8px;
+    background-color: #ff5400;
+    padding: 13px 15px;
 }
 /* navbar */
 .nav-bar {
@@ -24,13 +40,19 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
-    padding-left: 5vw;
-    padding-right: 5vw;
 }
 a {
     text-decoration: none;
+    color: #424247;
+    font-size: 18px;
+    font-weight: 700;
 }
 
+a:hover {
+    color: #ff5400;
+    font-size: 18px;
+    font-weight: 700;
+}
 .nav-option {
     display: flex;
     gap: 40px;
@@ -42,8 +64,55 @@ a {
     display: none;
 }
 
-/* for mobile */
+/* banner section */
+
+.banner-section {
+    background: linear-gradient(
+            180deg,
+            rgba(19, 19, 24, 0.8) 0%,
+            rgba(19, 19, 24, 0) 100%
+        ),
+        url("./Images/Group\ 13\ \(1\)\ \(1\).png");
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-bottom: 120px;
+    height: 60vh;
+    margin-top: 50px;
+    line-height: 95px;
+    padding: 10vh 10vw;
+}
+
+.banner-title {
+    color: #fff;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.input-field {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 12px 16px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.input-item {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: rgba(19, 19, 24, 0.5);
+    width: 100%;
+}
+
+/* ========================================================= */
+/* ----------------------for mobile------------------- */
 @media screen and (max-width: 600px) {
+    /* navbar */
     .big-font {
         font-size: 22px;
         font-weight: 800;
@@ -54,5 +123,40 @@ a {
     .nav-option {
         display: none;
     }
-}
 
+    /* banner */
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-section{
+        padding-top: 20px;
+            height: 80vh;
+
+    }
+    .banner-title {
+        color: #fff;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .input-field {
+        background: rgba(255, 255, 255, 0.3);
+        flex-direction: column;
+        margin-top: 30px;
+
+    }
+    .input-item {
+        border-radius: 8px;
+        background-color: #fff;
+        color: rgba(19, 19, 24, 0.5);
+        border: none;
+        /* width: 200px; */
+        /* height: 30px; */
+    }
+    .where{
+        width: 236px;
+    }
+}
